@@ -6,6 +6,8 @@ resource aws_instance "myec2" {
   ami        = data.aws_ami.latest-ubuntu.id
   instance_type = "t2.nano"
 }
+
+
 data "aws_ami" "latest-ubuntu" {
 most_recent = true
 owners = ["099720109477"] # Canonical
